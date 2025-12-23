@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZARA</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* NAVIGATION */
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        .navright {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-box input {
+            width: 150px;
+            padding: 8px;
+            border: none;
+            border-bottom: 1px solid black;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .search-btn {
+            padding: 8px 12px;
+            border: 1px solid black;
+            background: black;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .search-btn:hover {
+            background: white;
+            color: black;
+        }
+
+        nav a#loginBtn {
+            padding: 8px 15px;
+            border: 1px solid black;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s ease;
+            border-radius: 2px;
+            background: black;
+        }
+
+        nav a#loginBtn:hover {
+            background: white;
+            color: black;
+        }
+
+        /* HEADER SECTION */
+        .logo-img {
+            display: block;
+            width: 150px;
+            margin: 20px auto 0 auto;
+        }
+
+        .hero-img {
+            width: 100%;
+            max-height: 700px;
+            object-fit: cover;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+        }
+
+        .hero-text h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h5 {
+            color: grey;
+            margin-bottom: 15px;
+        }
+
+        .hero-text button {
+            padding: 10px 20px;
+            border: 1px solid black;
+            background: white;
+            color: black;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .hero-text button:hover {
+            background: black;
+            color: white;
+        }
+
+        /* ROW SECTION */
+        .row {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 50px 0;
+            padding: 0 10px;
+        }
+
+        .card {
+            flex: 1 1 300px;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card h2 {
+            margin: 15px 0 5px 0;
+        }
+
+        .card h5 {
+            color: grey;
+            margin-bottom: 10px;
+        }
+
+        .card button {
+            padding: 10px 20px;
+            border: 1px solid black;
+            background: black;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .card button:hover {
+            background: white;
+            color: black;
+        }
+
+        /* MEDIA QUERIES */
+        @media screen and (max-width: 1024px) {
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+            .hero-text h5 {
+                font-size: 1rem;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            nav {
+                justify-content: center;
+            }
+
+            .search-box input {
+                width: 120px;
+            }
+
+            .hero-text {
+                left: 5%;
+            }
+
+            .row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                max-width: 90%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero-text h5 {
+                font-size: 0.9rem;
+            }
+
+            .search-box input {
+                width: 100px;
+            }
+
+            nav a#loginBtn {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+
+            .search-btn {
+                padding: 6px 10px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navright">
+            <div class="search-box">
+                <input type="text" placeholder="Search">
+                <button class="search-btn">Search</button>
+            </div>
+            <a href="zara login.html" id="loginBtn">Login</a>
+        </div>
+    </nav>
+
+    <img src="logo.jpg" alt="Logo" class="logo-img">
+
+    <div style="position: relative;">
+        <img src="zarra.jpg" alt="Hero Image" class="hero-img">
+        <div class="hero-text">
+            <h1>New arrival</h1>
+            <h5>Discover new collection now</h5>
+            <button class="shop-btn"><b>Shop now</b></button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="card">
+            <img src="zara men.jpg" alt="Men Collection">
+            <h2>Man</h2>
+            <h5>Just for you</h5>
+            <a href="men's collection.html"><button class="shop-btn"><b>Shop now</b></button></a>
+        </div>
+        <div class="card">
+            <img src="zara women.jpg" alt="Women Collection">
+            <h2>Woman</h2>
+            <h5>Just for you</h5>
+            <a href="woman collection.html"><button class="shop-btn"><b>Shop now</b></button></a>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector(".search-btn").addEventListener("click", function() {
+            let value = document.querySelector(".search-box input").value;
+
+            if(value === "") {
+                alert("Please type something to search");
+            } 
+            else if(value.toLowerCase() === "mens" || value.toLowerCase() === "men"){
+                window.location.href = "men's collection.html";
+            }
+            else if(value.toLowerCase() === "womens" || value.toLowerCase() === "women"){
+                window.location.href = "woman collection.html";
+            }
+            else {
+                window.location.href = "search.html?query=";
+            }
+        });
+
+        document.getElementById("loginBtn").onclick = function () {
+            window.location.href = "login.html"; 
+        }
+    </script>
+</body>
+</html>
